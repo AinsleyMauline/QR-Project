@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Outfit', sans-serif;
         }
         body {
             display: flex;
@@ -17,10 +18,12 @@
             align-items: center;
             height: 100vh;
             background-color: #d6e2f0;
+            font-family: 'Outfit', sans-serif;
         }
         .card {
             background-color: #ffffff;
-            width: 300px;
+            width: 90%;
+            max-width: 300px; /* Default max-width */
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -37,14 +40,21 @@
             color: #333;
         }
         p {
-            font-size: 14px;
+            font-size: 15px;
             color: #666;
+        }
+
+        /* Media query for iPads */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .card {
+                max-width: 500px; /* Increase the max-width for iPads */
+            }
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.frontendmentor.io" alt="QR Code" class="qr-code">
+        <img src="images/image-qr-code.png" alt="QR Code" class="qr-code">
         <h2>Improve your front-end skills by building projects</h2>
         <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level.</p>
     </div>
