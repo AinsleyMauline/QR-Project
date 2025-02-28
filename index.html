@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color:rgb(31, 50, 81); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d6e2f0;
+        }
+        .card {
+            background-color: #ffffff;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .qr-code {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0 10px;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-
-  <h1>your front-end skills by building projects</h1> 
-
-  <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Ainsley Mauline</a>.
-  </div>
+    <div class="card">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.frontendmentor.io" alt="QR Code" class="qr-code">
+        <h2>Improve your front-end skills by building projects</h2>
+        <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level.</p>
+    </div>
 </body>
 </html>
